@@ -15,7 +15,7 @@ Ich plane, wie unten illustriert, Messwerte, Anpassungen und gefundene Peaks ink
 
 <img width="1242" height="696" alt="Unbenannt" src="https://github.com/user-attachments/assets/db68fb69-cbd1-485e-8eef-f11402e96424" />
 
-Ich werde jeweils zwei breite Plots nutzen, um die Residuen der Fits zu zeigen. Da ich ODR verwenden werde, werden die Residuen orthogonal und normiert sein.
+Ich werde jeweils zwei weitere  Plots nutzen, um die Residuen der Fits zu zeigen. Da ich ODR verwenden werde, werden die Residuen orthogonal und normiert dargestellt.
 
 Bestimmung der Resonanzfrequenzen:
 
@@ -29,7 +29,7 @@ Bemerkungen:
 
 Was ich jetzt schon weiß, ist, dass die Werte für (\chi^2/\mathrm{ddof}) ungefähr im Bereich von 0,15 bis 1,5 liegen. Etwa drei Fits haben einen Wert von unter 0,3, was nicht gut ist. Das sollten wir aber durch die konservative Wahl des Frequenzfehlers des CASSYs erklären können.
 
-Die ersten beiden Resonanzpeaks haben eine Einbuchtung an der Spitze. Woher diese kommt, weiß ich noch nicht. Der Tutor hat angesprochen, dass der erste Peak manchmal Anomalien aufweist und deshalb ausgeschlossen werden muss. Vielleicht gibt es dafür auch eine physikalische Erklärung.
+Die ersten beiden Resonanzpeaks haben eine Einbuchtung an der Spitze. Woher diese kommt, weiß ich noch nicht. Der Tutor hat angesprochen, dass der erste Peak manchmal Anomalien aufweist und deshalb manchmal ausgeschlossen werden können. Vielleicht gibt es aber auch eine physikalische Erklärung.
 
 Lineare Regression:
 
