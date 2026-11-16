@@ -62,5 +62,19 @@ ndof         = 20
 chi²/ndof    = 0.1500
 
 Fit 5:
+Window: 257 +- 5
+Lorentz-ODR-Fit:
+A      = 0.620912 ± 1.56
+x0     = 2041.15 ± 0.39
+gamma  = 9.34164 ± 14.5
+y0     = 1.7526 ± 1.57
+FWHM = 18.6833 ± 29
+
+chi² x-Anteil = 0.4094
+chi² y-Anteil = 0.8177
+chi² gesamt  = 1.2271
+ndof         = 6
+chi²/ndof    = 0.2045
+
 
 
