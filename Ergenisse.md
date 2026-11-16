@@ -160,4 +160,7 @@ Ergebniss und Fehler:
 v = 2mL = 342.33 m/s |
 sigma_v = sqrt((2L*sigma_m)^2+(2m*sigma_L)^2) = 0.40 m/s 
 
+das ergebniss unterscheidet sich um ungefähr 2.69 sigma von dem literatur wert (343.42 m/s) die unsichheit der temperatur habe ich noch nicht mit einbezogen.
+
+<img width="996" height="592" alt="Screenshot 2026-11-16 214235" src="https://github.com/user-attachments/assets/b34a6442-9ea0-46b3-85bd-1dcd0dbf1c49" />
 
