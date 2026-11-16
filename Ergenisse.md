@@ -109,5 +109,18 @@ chi²/ndof    = 1.3590
 
 Fit 8:
 Window 8: 405 +- 11
+Lorentz-ODR-Fit:
+A      = 1.3689 ± 0.0584
+x0     = 3263.77 ± 0.138
+gamma  = 5.30674 ± 0.456
+y0     = 0.198474 ± 0.063
+FWHM = 10.6135 ± 0.912
+
+chi² x-Anteil = 37.1656
+chi² y-Anteil = 4.5533
+chi² gesamt  = 41.7189
+ndof         = 18
+chi²/ndof    = 2.3177
+
 
 
