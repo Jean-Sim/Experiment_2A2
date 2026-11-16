@@ -140,7 +140,7 @@ chi^2_red = 52.836
 
 <img width="897" height="397" alt="Screenshot 2026-11-16 204822" src="https://github.com/user-attachments/assets/b79e2a57-1ed1-4909-b592-e8446b8a04b9" />
 
-Der sechste wert ist ein ausreiser (15 sigma) deswegen lasse ich diesen im finalen ergenisraus.
+Der sechste wert ist ein ausreisser (15 sigma) deswegen lasse ich diesen im finalen ergebnis raus.
 
 Lineare Regression [ohne 6]:
 f(n) = a*n + b
@@ -157,7 +157,7 @@ chi^2_red = 3.543
 Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen).
 
 Ergebniss und Fehler:
-v = 2mL = 
-sigma_v = sqrt((2L*sigma_m)^2+(2m*sigma_L)^2) = 
+v = 2mL = 342.33 m/s |
+sigma_v = sqrt((2L*sigma_m)^2+(2m*sigma_L)^2) = 0.40 m/s 
 
 
