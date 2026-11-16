@@ -77,4 +77,19 @@ ndof         = 6
 chi²/ndof    = 0.2045
 
 
+Fit 6:
+Window: 312 +- 7
+A      = 2113.91 ± 2.29e+06
+x0     = 2444.46 ± 0.234
+gamma  = 258.966 ± 1.4e+05
+y0     = -2112.01 ± 2.29e+06
+FWHM = 517.932 ± 2.81e+05
+
+chi² x-Anteil = 12.6264
+chi² y-Anteil = 0.9224
+chi² gesamt  = 13.5488
+ndof         = 8
+chi²/ndof    = 1.6936
+
+Fit 7:
 
