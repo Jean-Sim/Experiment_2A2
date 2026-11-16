@@ -122,5 +122,9 @@ chi² gesamt  = 41.7189
 ndof         = 18
 chi²/ndof    = 2.3177
 
+Plot 1:
+<img width="1917" height="961" alt="Screenshot 2026-11-16 161455" src="https://github.com/user-attachments/assets/19cafbed-dd84-46a7-b379-581c8723764f" />
+
+
 
 
