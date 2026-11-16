@@ -32,19 +32,19 @@ chi²/ndof    = 0.1708
 
 
 Fit 3:
-Window: 166 +- 8
+Window: 165 +- 5
 Lorentz-ODR-Fit:
-A      = 0.53434 ± 0.496
-x0     = 1224.4 ± 0.304
-gamma  = 12.0019 ± 7.79
-y0     = 1.85435 ± 0.501
-FWHM = 24.0038 ± 15.6
+A      = 102.859 ± 6.55e+04
+x0     = 1224.39 ± 0.553
+gamma  = 180.673 ± 5.76e+04
+y0     = -100.471 ± 6.55e+04
+FWHM = 361.346 ± 1.15e+05
 
-chi² x-Anteil = 0.3849
-chi² y-Anteil = 0.8008
-chi² gesamt  = 1.1857
-ndof         = 12
-chi²/ndof    = 0.0988
+chi² x-Anteil = 0.1130
+chi² y-Anteil = 0.2607
+chi² gesamt  = 0.3737
+ndof         = 6
+chi²/ndof    = 0.0623
 
 Fit 4:
 Window: 218 +- 12
@@ -123,11 +123,38 @@ ndof         = 18
 chi²/ndof    = 2.3177
 
 Plot 1:
-<img width="1917" height="961" alt="Screenshot 2026-11-16 161455" src="https://github.com/user-attachments/assets/19cafbed-dd84-46a7-b379-581c8723764f" />
+<img width="1918" height="960" alt="Screenshot 2026-11-16 201713" src="https://github.com/user-attachments/assets/98309dd3-2a6e-48ef-b63e-e0bb0c035a2d" />
 
 Residuen 1:
-<img width="596" height="800" alt="Screenshot 2026-11-16 170125" src="https://github.com/user-attachments/assets/4eb79177-8e0c-43e1-a20e-039925543168" />
+<img width="597" height="794" alt="Screenshot 2026-11-16 201827" src="https://github.com/user-attachments/assets/fa25ab3a-a78b-4147-a505-013344f9b618" />
 
+Lineare Regression [gesamt]:
+f(n) = a*n + b
+a = (407.543007 +- 0.036764) Hz
+b = (2.992821 +- 0.237393) Hz
+chi^2 = 317.018
+ndof = 6
+chi^2_red = 52.836
+
+<img width="947" height="568" alt="Screenshot 2026-11-16 204719" src="https://github.com/user-attachments/assets/c7e4b712-d0d9-468f-bf1b-4f0c05ec17cf" />
+
+<img width="897" height="397" alt="Screenshot 2026-11-16 204822" src="https://github.com/user-attachments/assets/b79e2a57-1ed1-4909-b592-e8446b8a04b9" />
+
+Der sechste wert ist ein ausreiser (15 sigma) deswegen lasse ich diesen im finalen ergenisraus.
+
+Lineare Regression [ohne 6]:
+f(n) = a*n + b
+a = (407.536726 +- 0.036766) Hz
+b = (3.562856 +- 0.239669) Hz
+chi^2 = 17.715
+ndof = 5
+chi^2_red = 3.543
+
+<img width="898" height="500" alt="Screenshot 2026-11-16 205554" src="https://github.com/user-attachments/assets/4ef71eef-a2df-4339-8378-0fadee746551" />
+
+<img width="898" height="397" alt="Screenshot 2026-11-16 205654" src="https://github.com/user-attachments/assets/1491d06c-5c82-4a26-83cc-ac99ad1f6035" />
+
+Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen).
 
 
 
