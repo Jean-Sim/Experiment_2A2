@@ -14,6 +14,7 @@ chi² gesamt  = 8.4959
 ndof         = 26
 chi²/ndof    = 0.3268
 
+
 Fit 2:
 Window: 120 +- 15
 Lorentz-ODR-Fit:
@@ -28,3 +29,20 @@ chi² y-Anteil = 4.3319
 chi² gesamt  = 4.4405
 ndof         = 26
 chi²/ndof    = 0.1708
+
+
+Fit 3:
+Window: 166 +- 8
+Lorentz-ODR-Fit:
+A      = 0.53434 ± 0.496
+x0     = 1224.4 ± 0.304
+gamma  = 12.0019 ± 7.79
+y0     = 1.85435 ± 0.501
+FWHM = 24.0038 ± 15.6
+
+chi² x-Anteil = 0.3849
+chi² y-Anteil = 0.8008
+chi² gesamt  = 1.1857
+ndof         = 12
+chi²/ndof    = 0.0988
+
