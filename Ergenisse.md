@@ -154,7 +154,7 @@ chi^2_red = 3.543
 
 <img width="898" height="397" alt="Screenshot 2026-11-16 205654" src="https://github.com/user-attachments/assets/1491d06c-5c82-4a26-83cc-ac99ad1f6035" />
 
-Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen).
+Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen und somit das chi^2/ddof der linearen regression zu verkleinern).
 
 Ergebniss und Fehler:
 v = 2mL = 342.33 m/s |
