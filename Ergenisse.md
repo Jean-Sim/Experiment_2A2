@@ -79,6 +79,7 @@ chi²/ndof    = 0.2045
 
 Fit 6:
 Window: 312 +- 7
+Lorentz-ODR-Fit:
 A      = 2113.91 ± 2.29e+06
 x0     = 2444.46 ± 0.234
 gamma  = 258.966 ± 1.4e+05
@@ -92,4 +93,18 @@ ndof         = 8
 chi²/ndof    = 1.6936
 
 Fit 7:
+Window: 356 +- 7
+Lorentz-ODR-Fit:
+A      = 3.42487 ± 5.52
+x0     = 2856.61 ± 0.171
+gamma  = 9.60273 ± 9.26
+y0     = -1.57383 ± 5.52
+FWHM = 19.2055 ± 18.5
+
+chi² x-Anteil = 12.6798
+chi² y-Anteil = 0.9105
+chi² gesamt  = 13.5904
+ndof         = 10
+chi²/ndof    = 1.3590
+
 
