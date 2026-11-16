@@ -107,4 +107,7 @@ chi² gesamt  = 13.5904
 ndof         = 10
 chi²/ndof    = 1.3590
 
+Fit 8:
+Window 8: 405 +- 11
+
 
