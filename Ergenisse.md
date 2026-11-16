@@ -125,6 +125,10 @@ chi²/ndof    = 2.3177
 Plot 1:
 <img width="1917" height="961" alt="Screenshot 2026-11-16 161455" src="https://github.com/user-attachments/assets/19cafbed-dd84-46a7-b379-581c8723764f" />
 
+Residuen 1:
+<img width="596" height="800" alt="Screenshot 2026-11-16 170125" src="https://github.com/user-attachments/assets/4eb79177-8e0c-43e1-a20e-039925543168" />
+
+
 
 
 
