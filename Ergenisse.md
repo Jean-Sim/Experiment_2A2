@@ -156,6 +156,8 @@ chi^2_red = 3.543
 
 Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen).
 
-
+Ergebniss und Fehler:
+v = 2mL = 
+sigma_v = sqrt((2L*sigma_m)^2+(2m*sigma_L)^2) = 
 
 
