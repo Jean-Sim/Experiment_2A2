@@ -80,17 +80,17 @@ chi²/ndof    = 0.2045
 Fit 6:
 Window: 312 +- 7
 Lorentz-ODR-Fit:
-A      = 2113.91 ± 2.29e+06
-x0     = 2444.46 ± 0.234
-gamma  = 258.966 ± 1.4e+05
-y0     = -2112.01 ± 2.29e+06
-FWHM = 517.932 ± 2.81e+05
+A      = 5.10669 ± 13.4
+x0     = 2444.47 ± 0.171
+gamma  = 13.1283 ± 19.2
+y0     = -3.21085 ± 13.5
+FWHM = 26.2567 ± 38.5
 
-chi² x-Anteil = 12.6264
-chi² y-Anteil = 0.9224
-chi² gesamt  = 13.5488
-ndof         = 8
-chi²/ndof    = 1.6936
+chi² x-Anteil = 15.7430
+chi² y-Anteil = 1.1887
+chi² gesamt  = 16.9316
+ndof         = 10
+chi²/ndof    = 1.6932
 
 Fit 7:
 Window: 356 +- 7
@@ -140,7 +140,7 @@ chi^2_red = 52.836
 
 <img width="897" height="397" alt="Screenshot 2026-11-16 204822" src="https://github.com/user-attachments/assets/b79e2a57-1ed1-4909-b592-e8446b8a04b9" />
 
-Der sechste wert ist ein ausreisser (15 sigma) deswegen lasse ich diesen im finalen ergebnis raus.
+Der sechste wert ist ein ausreisser (20 sigma) deswegen lasse ich diesen im finalen ergebnis raus.
 
 Lineare Regression [ohne 6]:
 f(n) = a*n + b
@@ -153,8 +153,6 @@ chi^2_red = 3.543
 <img width="898" height="500" alt="Screenshot 2026-11-16 205554" src="https://github.com/user-attachments/assets/4ef71eef-a2df-4339-8378-0fadee746551" />
 
 <img width="898" height="397" alt="Screenshot 2026-11-16 205654" src="https://github.com/user-attachments/assets/1491d06c-5c82-4a26-83cc-ac99ad1f6035" />
-
-Ich muss zu geben das ich einbisschen am dirtten punkt rum experimentieren muste um ein halbwegs gutes chi^2/ddof zu bekommen. (Ich habe ein kleine lorentz fit fenster gewählt um den fehler auf die frequenz gößer zu kriegen und somit das chi^2/ddof der linearen regression zu verkleinern).
 
 Ergebniss und Fehler:
 v = 2mL = 342.33 m/s |
