@@ -1,0 +1,197 @@
+\documentclass[11pt,a4paper]{article}
+
+% Sprach- und Satzkonfiguration
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+
+% Messwerte mit Unsicherheit werden für die Übersichtlichkeit zweizeilig gesetzt.
+\newcommand{\wert}[2]{\shortstack{$#1$\\$\pm #2$}}
+
+\title{Bestimmung der Schallgeschwindigkeit in Luft\\
+       \large Auswertung stehender Wellen in einem beidseitig geschlossenen Rohr mit dem Cassy}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Versuchsaufbau und theoretische Grundlage}
+
+Zur Bestimmung der Schallgeschwindigkeit in Luft wurden in einem beidseitig geschlossenen Rohr stehende Wellen erzeugt. Hierzu wurde die Anregungsfrequenz variiert, um die Resonanzfrequenzen zu identifizieren. Anschließend lässt sich die Schallgeschwindigkeit aus der Steigung der Resonanzfrequenzen in Abhängigkeit von ihrer Ordnung gemäß der folgenden Beziehung bestimmen:
+\begin{equation}
+  v = 2 L m.
+  \label{eq:schallgeschwindigkeit}
+\end{equation}
+Dabei bezeichnet $L$ die Rohrlänge und $m$ die Steigung der Resonanzfrequenz in Abhängigkeit von der Resonanzordnung.
+
+\section{Bestimmung der Rohrlänge und ihrer Unsicherheit}
+
+Die Rohrlänge wurde mithilfe eines Maßbandes der EG-Genauigkeitsklasse~II bestimmt. Für die Ablesung wurde eine Auflösung von $\mathrm{1\,mm}$ zugrunde gelegt. Nach Herstellerangaben beträgt die Toleranz des Maßbandes $\pm\,\mathrm{0{,}7\,mm}$. Für beide Unsicherheitsbeiträge wurde eine Gleichverteilung angenommen. Daraus ergeben sich
+\begin{align}
+  \sigma_{\mathrm{sys}}
+    &= \frac{\mathrm{0{,}7\,mm}}{\sqrt{3}}
+     = \mathrm{0{,}40\,mm}, \\
+  \sigma_{\mathrm{Ablesung}}
+    &= \frac{\mathrm{1\,mm}}{2\sqrt{3}}
+     = \mathrm{0{,}29\,mm}.
+\end{align}
+Die kombinierte Unsicherheit der Rohrlänge folgt aus der quadratischen Addition beider Beiträge:
+\begin{equation}
+  \sigma_L
+    = \sqrt{\sigma_{\mathrm{sys}}^2+\sigma_{\mathrm{Ablesung}}^2}
+    = \mathrm{0{,}00049\,m}.
+\end{equation}
+Für die weitere Auswertung wird somit die folgende Rohrlänge verwendet:
+\begin{equation}
+  L = 0{,}42 \pm 0{,}00049\,\mathrm{m}.
+  \label{eq:rohrlaenge}
+\end{equation}
+
+\section{Messung der Resonanzfrequenzen}
+
+Zur Bestimmung der Resonanzfrequenzen wurde der Schalldruck mithilfe eines Mikrofons in eine elektrische Spannung umgewandelt. Aus den Spannungsmaxima der mit einem Cassy aufgezeichneten Spannungskurve wurde auf das Auftreten von Resonanzen geschlossen. Der Spannungsverlauf wurde in Abhängigkeit von der Frequenz erfasst, die mit einer Cassy Timer Box bestimmt wurde.
+
+Sowohl die Spannungs als auch die Frequenzmessung sind mit Unsicherheiten behaftet. Für die Spannungsmessung wurde die vom Hersteller des Cassy angegebene Genauigkeit verwendet. Für die Frequenz wurde aufgrund einer Torzeit von einer Sekunde eine Genauigkeit von $\mathrm{1\,Hz}$ angenommen. Unter der Annahme einer Gleichverteilung ergeben sich die folgenden Unsicherheiten:
+\begin{align}
+  \sigma_U &= \frac{0{,}01\,U_f + 0{,}005\,U_{\max}}{\sqrt{3}},
+    \label{eq:spannungunsicherheit} \\
+  \sigma_f &= \frac{\mathrm{1\,Hz}}{\sqrt{3}}.
+    \label{eq:frequenzunsicherheit}
+\end{align}
+Dabei bezeichnet $U_{\max}$ die obere Grenze des verwendeten Spannungsmessbereichs von $\mathrm{0\,V}$ bis $\mathrm{3\,V}$. Die Unsicherheit $\sigma_f$ wurde bewusst konservativ gewählt. Die Torzeit von einer Sekunde begrenzt die Frequenzauflösung auf etwa $\mathrm{1\,Hz}$; darüber hinaus sind zusätzliche Effekte, beispielsweise Schwankungen der Torzeit und des Signals, möglich, die sich im Rahmen des Versuchs nicht zuverlässig quantifizieren ließen.
+
+\section{Lorentz-Anpassungen der Resonanzmaxima}
+
+Zur Bestimmung der Positionen der Resonanzmaxima und ihrer Unsicherheiten wurden die ungefähren Peakpositionen zunächst visuell ermittelt. Anschließend wurde um jedes Maximum ein Datenfenster festgelegt und innerhalb dieses Bereichs mithilfe von \texttt{scipy.odr} eine Lorentz-Funktion angepasst. Die verwendete Lorentz-Funktion lautet
+\begin{equation}
+  U(f) = y_0 + \frac{A\,\gamma^2}{(f-x_0)^2 + \gamma^2}.
+  \label{eq:lorentzfunktion}
+\end{equation}
+Hierbei bezeichnet $y_0$ den konstanten Spannungsuntergrund, $A$ die Höhe des Resonanzmaximums über diesem Untergrund, $x_0$ die Resonanzfrequenz und $\gamma$ die Halbwerts-Halbbreite der Resonanzkurve. Die volle Halbwertsbreite beträgt entsprechend $\mathrm{FWHM}=2\gamma$.
+
+Aufgrund der ungleichmäßigen Verteilung der Messwerte um die einzelnen Maxima sowie des Auftretens mehrfach vorhandener Messwerte konnte kein einheitliches Anpassungsfenster verwendet werden. Deshalb wurde für jedes Maximum ein individuelles Fenster gewählt. Die Fenster wurden so festgelegt, dass die ermittelte Resonanzfrequenz und der reduzierte Chi Quadrat Wert $\chi^2/n_{\mathrm{dof}}$ bei geringfügigen Änderungen und Verschiebungen des Fensters möglichst stabil blieben. Die ungleichmäßige Datenverteilung ist darauf zurückzuführen, dass zwei unterschiedliche Schrittweiten verwendet wurden: im Allgemeinen $\mathrm{20\,Hz}$ und in der Nähe der Resonanzmaxima $\mathrm{1\,Hz}$.
+
+bildplatzhalter{1}
+bildplatzhalter{2}
+bildplatzhalter{3}
+
+\begin{table}[H]
+  \centering
+  \caption{Ergebnisse der acht Lorentz Anpassungen. Die angegebenen Unsicherheiten und Fensterwerte stammen aus der verlinkten Ergebnisdatei.}
+  \label{tab:lorentzfits}
+  \vspace{0.4em}
+  \begingroup
+  \small
+  \setlength{\tabcolsep}{5pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{@{} c c c c c c @{}}
+    \toprule
+    Fit & Fenster & $A$ & $x_0$ & $\gamma$ & $y_0$ \\
+    \midrule
+    1 & $63\pm15$ & \wert{3{,}54703}{11{,}2} & \wert{411{,}519}{0{,}260} & \wert{49{,}6783}{83{,}1} & \wert{-1{,}15706}{11{,}2} \\
+    2 & $120\pm15$ & \wert{135{,}152}{3{,}25\cdot10^4} & \wert{817{,}862}{0{,}903} & \wert{392{,}038}{4{,}72\cdot10^4} & \wert{-132{,}77}{3{,}25\cdot10^4} \\
+    3 & $165\pm5$ & \wert{102{,}859}{6{,}55\cdot10^4} & \wert{1224{,}39}{0{,}553} & \wert{180{,}673}{5{,}76\cdot10^4} & \wert{-100{,}471}{6{,}55\cdot10^4} \\
+    4 & $218\pm12$ & \wert{1{,}88962}{2{,}93} & \wert{1633{,}47}{0{,}239} & \wert{30{,}6315}{27} & \wert{0{,}497807}{2{,}93} \\
+    5 & $257\pm5$ & \wert{0{,}620912}{1{,}56} & \wert{2041{,}15}{0{,}390} & \wert{9{,}34164}{14{,}5} & \wert{1{,}7526}{1{,}57} \\
+    6 & $312\pm7$ & \wert{2113{,}91}{2{,}29\cdot10^6} & \wert{2444{,}46}{0{,}234} & \wert{258{,}966}{1{,}4\cdot10^5} & \wert{-2112{,}01}{2{,}29\cdot10^6} \\
+    7 & $356\pm7$ & \wert{3{,}42487}{5{,}52} & \wert{2856{,}61}{0{,}171} & \wert{9{,}60273}{9{,}26} & \wert{-1{,}57383}{5{,}52} \\
+    8 & $405\pm11$ & \wert{1{,}3689}{0{,}0584} & \wert{3263{,}77}{0{,}138} & \wert{5{,}30674}{0{,}456} & \wert{0{,}198474}{0{,}063} \\
+    \bottomrule
+  \end{tabular}
+  \endgroup
+  \par\vspace{0.5em}
+\end{table}
+
+Die reduzierten Chi Quadrat Werte der Lorentz Anpassungen sind teilweise sehr klein. Dies war angesichts der konservativ gewählten Unsicherheit der Frequenzmessung zu erwarten. Die entsprechenden Anpassungen werden daher im Rahmen dieser Auswertung als akzeptabel betrachtet. Genauso sind einige der Fitparameter $A$,$\gamma$,$y_0$  teilweise nur sehr schlecht bestimmt trotzdem sehen wir $x_0$ als verlässlich an da wir, wie zuvor erwähnt dessen Stabilität unter variieren der Fitfenster überprüft haben.
+
+\section{Lineare Regression der Resonanzfrequenzen}
+
+Zur Bestimmung der Steigung wurde eine lineare Regression mit \texttt{scipy.optimize.curve\_fit} durchgeführt. Hierzu wurden die ermittelten Resonanzfrequenzen einschließlich ihrer Unsicherheiten gegen die jeweilige Resonanzordnung aufgetragen und mit einer Funktion der Form
+\begin{equation}
+  f(n) = a n + b
+  \label{eq:lineares-modell}
+\end{equation}
+angepasst. Das idealisierte Modell sieht keinen Achsenabschnitt $b$ vor. Dieser Parameter wurde dennoch berücksichtigt, um mögliche systematische Offset Effekte erfassen zu können.
+
+bildplatzhalter{4}
+bildplatzhalter{5}
+
+\begin{table}[H]
+  \centering
+  \caption{Ergebnisse der ersten linearen Regression unter Berücksichtigung aller Resonanzfrequenzen.}
+  \label{tab:regression1}
+  \vspace{0.4em}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}ccccc@{}}
+      \toprule
+      $a$ in $\mathrm{Hz}$ & $b$ in $\mathrm{Hz}$ & $\chi^2$ & $n_{\mathrm{dof}}$ & $\chi^2/n_{\mathrm{dof}}$ \\
+      \midrule
+      $407{,}543007\pm0{,}036764$ & $2{,}992821\pm0{,}237393$ & $317{,}018$ & $6$ & $52{,}836$ \\
+      \bottomrule
+    \end{tabular}%
+  }
+  \par\vspace{0.5em}
+\end{table}
+
+Die erste Anpassung weist einen sehr großen reduzierten Chi-Quadrat-Wert auf. Dies ist nahezu vollständig auf den sechsten Messwert zurückzuführen, dessen Abweichung von der Anpassung fast 15 Standardabweichungen beträgt. Unter diesen Umständen wird es als gerechtfertigt angesehen, diesen Messwert bei der weiteren Regression unter folgender Rechtfertigung auszuschließen. Als wahrscheinliche Ursache des Ausreißers werden die Änderungen der Mikrofonempfindlichkeit und der Amplitude des Signalgenerators betrachtet, die nach Beschwerden über die Lautstärke im Anschluss an das fünfte Resonanzmaximum vorgenommen wurden und so mit wahrscheinlich die form des sechsten Resonanzmaximum verfälscht hat.
+
+bildplatzhalter{6}
+bildplatzhalter{7}
+
+\begin{table}[H]
+  \centering
+  \caption{Ergebnisse der zweiten linearen Regression unter Ausschluss des sechsten Messwertes.}
+  \label{tab:regression2}
+  \vspace{0.4em}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{@{}ccccc@{}}
+      \toprule
+      $a$ in $\mathrm{Hz}$ & $b$ in $\mathrm{Hz}$ & $\chi^2$ & $n_{\mathrm{dof}}$ & $\chi^2/n_{\mathrm{dof}}$ \\
+      \midrule
+      $407{,}536726\pm0{,}036766$ & $3{,}562856\pm0{,}239669$ & $17{,}715$ & $5$ & $3{,}543$ \\
+      \bottomrule
+    \end{tabular}%
+  }
+  \par\vspace{0.5em}
+\end{table}
+
+Unter Ausschluss des sechsten Messwertes verbessert sich die Anpassung erheblich. Der reduzierte Chi Quadrat Wert sowie die Verteilung der Residuen haben wir im Rahmen dieser Auswertung als akzeptabel eingestuft. Damit kann die gesuchte Steigung $m$ bestimmt werden. Auffällig ist, dass der Achsenabschnitt $b$ statistisch signifikant von null abweicht. Dies deutet auf einen systematischen Fehler bei der Frequenzmessung oder bei der Bestimmung der Resonanzmaxima hin, es besteht auch die Möglichkeit einer Abweichung vom Idealisierten Modell die den Rahmen diese Auswertung übersteigt. Die statistische Signifikanz dieses Parameters rechtfertigt aus Sicht der Auswertung die Verwendung des Modells mit zwei Parametern.
+
+Aus der zweiten Regression ergibt sich für die Steigung
+\begin{equation}
+  m = 407{,}537\pm0{,}037\,\mathrm{Hz}.
+  \label{eq:steigung}
+\end{equation}
+
+\section{Ergebnis und Vergleich mit dem Literaturwert}
+
+Die Unsicherheit der Schallgeschwindigkeit ergibt sich durch Gaußsche Fehlerfortpflanzung aus den Unsicherheiten der Rohrlänge und der Regressionssteigung:
+\begin{equation}
+  \sigma_v
+  = \sqrt{\bigl(2\sigma_L m\bigr)^2 + \bigl(2 L\sigma_m\bigr)^2}
+  = \mathrm{0{,}40\,m\,s^{-1}}.
+  \label{eq:fehlerfortpflanzung}
+\end{equation}
+Damit ergibt sich als Messergebnis
+\begin{equation}
+  \boxed{v = 342{,}33\pm0{,}40\,\mathrm{m\,s^{-1}}.}
+  \label{eq:ergebnis}
+\end{equation}
+
+Unter Annahme einer Umgebungstemperatur von $\mathrm{20\,^\circ C}$ beträgt der zugrunde gelegte Literaturwert $\mathrm{343{,}42\,m\,s^{-1}}$. Das Messergebnis weicht nach der ursprünglichen Auswertung um etwa $2{,}69\,\sigma$ von diesem Wert ab. Dies stellt eine merkliche, im Rahmen der vorgenommenen Bewertung jedoch noch als akzeptabel eingestufte Abweichung dar.
+
+bildplatzhalter{8}
+
+\end{document}
