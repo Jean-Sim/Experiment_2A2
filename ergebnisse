@@ -1,0 +1,163 @@
+Lorentz-fits:
+Fit 1:
+Window: 63 +- 15
+Lorentz-ODR-Fit:
+A      = 3.54703 ± 11.2
+x0     = 411.519 ± 0.26
+gamma  = 49.6783 ± 83.1
+y0     = -1.15706 ± 11.2
+FWHM = 99.3567 ± 166
+
+chi² x-Anteil = 2.1097
+chi² y-Anteil = 6.3862
+chi² gesamt  = 8.4959
+ndof         = 26
+chi²/ndof    = 0.3268
+
+
+Fit 2:
+Window: 120 +- 15
+Lorentz-ODR-Fit:
+A      = 135.152 ± 3.25e+04
+x0     = 817.862 ± 0.903
+gamma  = 392.038 ± 4.72e+04
+y0     = -132.77 ± 3.25e+04
+FWHM = 784.076 ± 9.44e+04
+
+chi² x-Anteil = 0.1086
+chi² y-Anteil = 4.3319
+chi² gesamt  = 4.4405
+ndof         = 26
+chi²/ndof    = 0.1708
+
+
+Fit 3:
+Window: 165 +- 5
+Lorentz-ODR-Fit:
+A      = 102.859 ± 6.55e+04
+x0     = 1224.39 ± 0.553
+gamma  = 180.673 ± 5.76e+04
+y0     = -100.471 ± 6.55e+04
+FWHM = 361.346 ± 1.15e+05
+
+chi² x-Anteil = 0.1130
+chi² y-Anteil = 0.2607
+chi² gesamt  = 0.3737
+ndof         = 6
+chi²/ndof    = 0.0623
+
+Fit 4:
+Window: 218 +- 12
+Lorentz-ODR-Fit:
+A      = 1.88962 ± 2.93
+x0     = 1633.47 ± 0.239
+gamma  = 30.6315 ± 27
+y0     = 0.497807 ± 2.93
+FWHM = 61.2631 ± 54
+
+chi² x-Anteil = 0.9743
+chi² y-Anteil = 2.0253
+chi² gesamt  = 2.9996
+ndof         = 20
+chi²/ndof    = 0.1500
+
+Fit 5:
+Window: 257 +- 5
+Lorentz-ODR-Fit:
+A      = 0.620912 ± 1.56
+x0     = 2041.15 ± 0.39
+gamma  = 9.34164 ± 14.5
+y0     = 1.7526 ± 1.57
+FWHM = 18.6833 ± 29
+
+chi² x-Anteil = 0.4094
+chi² y-Anteil = 0.8177
+chi² gesamt  = 1.2271
+ndof         = 6
+chi²/ndof    = 0.2045
+
+
+Fit 6:
+Window: 312 +- 7
+Lorentz-ODR-Fit:
+A      = 5.10669 ± 13.4
+x0     = 2444.47 ± 0.171
+gamma  = 13.1283 ± 19.2
+y0     = -3.21085 ± 13.5
+FWHM = 26.2567 ± 38.5
+
+chi² x-Anteil = 15.7430
+chi² y-Anteil = 1.1887
+chi² gesamt  = 16.9316
+ndof         = 10
+chi²/ndof    = 1.6932
+
+Fit 7:
+Window: 356 +- 7
+Lorentz-ODR-Fit:
+A      = 3.42487 ± 5.52
+x0     = 2856.61 ± 0.171
+gamma  = 9.60273 ± 9.26
+y0     = -1.57383 ± 5.52
+FWHM = 19.2055 ± 18.5
+
+chi² x-Anteil = 12.6798
+chi² y-Anteil = 0.9105
+chi² gesamt  = 13.5904
+ndof         = 10
+chi²/ndof    = 1.3590
+
+Fit 8:
+Window 8: 405 +- 11
+Lorentz-ODR-Fit:
+A      = 1.3689 ± 0.0584
+x0     = 3263.77 ± 0.138
+gamma  = 5.30674 ± 0.456
+y0     = 0.198474 ± 0.063
+FWHM = 10.6135 ± 0.912
+
+chi² x-Anteil = 37.1656
+chi² y-Anteil = 4.5533
+chi² gesamt  = 41.7189
+ndof         = 18
+chi²/ndof    = 2.3177
+
+Plot 1:
+<img width="1918" height="960" alt="Screenshot 2026-11-16 201713" src="https://github.com/user-attachments/assets/98309dd3-2a6e-48ef-b63e-e0bb0c035a2d" />
+
+Residuen 1:
+<img width="597" height="794" alt="Screenshot 2026-11-16 201827" src="https://github.com/user-attachments/assets/fa25ab3a-a78b-4147-a505-013344f9b618" />
+
+Lineare Regression [gesamt]:
+f(n) = a*n + b
+a = (407.543007 +- 0.036764) Hz
+b = (2.992821 +- 0.237393) Hz
+chi^2 = 317.018
+ndof = 6
+chi^2_red = 52.836
+
+<img width="947" height="568" alt="Screenshot 2026-11-16 204719" src="https://github.com/user-attachments/assets/c7e4b712-d0d9-468f-bf1b-4f0c05ec17cf" />
+
+<img width="897" height="397" alt="Screenshot 2026-11-16 204822" src="https://github.com/user-attachments/assets/b79e2a57-1ed1-4909-b592-e8446b8a04b9" />
+
+Der sechste wert ist ein ausreisser (20 sigma) deswegen lasse ich diesen im finalen ergebnis raus.
+
+Lineare Regression [ohne 6]:
+f(n) = a*n + b
+a = (407.536726 +- 0.036766) Hz
+b = (3.562856 +- 0.239669) Hz
+chi^2 = 17.715
+ndof = 5
+chi^2_red = 3.543
+
+<img width="898" height="500" alt="Screenshot 2026-11-16 205554" src="https://github.com/user-attachments/assets/4ef71eef-a2df-4339-8378-0fadee746551" />
+
+<img width="898" height="397" alt="Screenshot 2026-11-16 205654" src="https://github.com/user-attachments/assets/1491d06c-5c82-4a26-83cc-ac99ad1f6035" />
+
+Ergebniss und Fehler:
+v = 2mL = 342.33 m/s |
+sigma_v = sqrt((2L*sigma_m)^2+(2m*sigma_L)^2) = 0.40 m/s 
+
+das ergebniss unterscheidet sich um ungefähr 2.69 sigma von dem literatur wert (343.42 m/s) die unsichheit der temperatur habe ich noch nicht mit einbezogen.
+
+<img width="996" height="592" alt="Screenshot 2026-11-16 214235" src="https://github.com/user-attachments/assets/b34a6442-9ea0-46b3-85bd-1dcd0dbf1c49" />
