@@ -50,7 +50,7 @@ unsicherheit:
 
 ergebniss:
 v = 342.33 +- 0.40
-das gewichtete mitte lhat zu keiner segnifikanten änderung des ergenisses geführt 
+das gewichtete mitte hat zu keiner segnifikanten änderung des ergenisses geführt 
 
 
 
