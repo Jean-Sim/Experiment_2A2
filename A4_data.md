@@ -23,7 +23,7 @@ f = 3264 +- 2Hz
 (sigma_m/m)^2 = 4.47 * 10^-4
 
 ---------------------------
-cov(v_1,v_2) = 4*m_1*m_2*sigma_L
+cov(v_1,v_2) = 4*m_1*m_2*sigma_L = 0.15952
 cov(v_i,v_3) = v_i*v_3*sigma_r  |  sigma_r = sigma_hersteller / L
-cov(v_1,v_3) = 0.1540
-cov(v_2,v_3) = 0.1541
+cov(v_1,v_3) = 0.10540
+cov(v_2,v_3) = 0.10541
