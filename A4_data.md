@@ -36,4 +36,22 @@ covarianz matrix:
 Korelationsmatrix:
 <img width="334" height="108" alt="Screenshot 2026-11-20 190228" src="https://github.com/user-attachments/assets/ad08d4be-4e24-4f86-b728-b7de6248e5f6" />
 
+t_ij = |v_i - v_j|/(sigma_i^2 + sigma_j^2 - 2cov(i,j))
+t_12 = 0.0611
+t_13 = 0.399
+t_23 = 0.401
+sind alle verträglich 
+
+gewichteter mittelwert:
+<img width="177" height="93" alt="Screenshot 2026-11-20 191137" src="https://github.com/user-attachments/assets/936b269d-e883-4ae9-a8ef-e9e2204ccb3e" />
+
+unsicherheit:
+<img width="210" height="97" alt="Screenshot 2026-11-20 191330" src="https://github.com/user-attachments/assets/31184972-5957-4a30-a7e7-c30823d89631" />
+
+ergebniss:
+v = 342.33 +- 0.40
+das gewichtete mitte lhat zu keiner segnifikanten änderung des ergenisses geführt 
+
+
+
 
