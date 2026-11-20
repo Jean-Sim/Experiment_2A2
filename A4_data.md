@@ -26,7 +26,7 @@ man kann erkennen das der längen messfehler domniert bei 1 und 2, bei drei ist 
 
 ---------------------------
 messung 1 und 2 frequenz korelation sind vernachlässigbar weil unterschiedliche messgeräte verwendet wurden also gilt nur längen korelation
-cov(v_1,v_2) = 4*m_1*m_2*sigma_L = 0.15952
+cov(v_1,v_2) = 4*m_1*m_2*sigma_L^2 = 0.15952
 messung 2 und drei können wir frequnz korelation auch vernachlkässigen da wir f_3 von messung zwei abgelesen aber neu eingestellt haben
 cov(v_i,v_3) = v_i*v_3*sigma_r  |  sigma_r = sigma_hersteller / L
 cov(v_1,v_3) = 0.10540
