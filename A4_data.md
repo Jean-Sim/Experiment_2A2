@@ -22,6 +22,8 @@ f = 3264 +- 2Hz
 (sigma_f/f)^2 = 3.75 * 10^-7
 (sigma_m/m)^2 = 4.47 * 10^-4
 
+man kann erkennen das der längen messfehler domniert bei 1 und 2, bei drei ist es der steigungs messfehler der auch von dem längen messfehler abhängt.
+
 ---------------------------
 messung 1 und 2 frequenz korelation sind vernachlässigbar weil unterschiedliche messgeräte verwendet wurden also gilt nur längen korelation
 cov(v_1,v_2) = 4*m_1*m_2*sigma_L = 0.15952
@@ -52,6 +54,4 @@ ergebniss:
 v = 342.33 +- 0.40
 das gewichtete mitte hat zu keiner segnifikanten änderung des ergenisses geführt 
 
-
-
-
+der fehler des finalen ergebnisses wird von dem längenfehler dominiert da aufgrund der gewichtung hauptsächlich v_1 und v_2 in das ergebniss eingeflossen sind.
