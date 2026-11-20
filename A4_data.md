@@ -55,3 +55,5 @@ v = 342.33 +- 0.40
 das gewichtete mitte hat zu keiner segnifikanten änderung des ergenisses geführt 
 
 der fehler des finalen ergebnisses wird von dem längenfehler dominiert da aufgrund der gewichtung hauptsächlich v_1 und v_2 in das ergebniss eingeflossen sind.
+Plot:<img width="1195" height="591" alt="Screenshot 2026-11-20 193930" src="https://github.com/user-attachments/assets/24fbfe3e-43e0-4e16-8e09-e0827bea76c2" />
+
