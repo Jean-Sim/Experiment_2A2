@@ -6,13 +6,12 @@ n_alle = np.arange(1, 9, dtype=int)
 f_alle = np.array([411.519, 817.862, 1224.440, 1633.470,2041.150, 2444.47, 2856.610, 3263.770])
 sigma_alle = np.array([0.260, 0.903, 0.547, 0.239,0.390, 0.171, 0.171, 0.138])
 
-#ohne = 6
 def gerade(n, a, b):
     return a * n + b
-
-n = n_alle#[maske]
-f = f_alle#[maske]
-sigma_f = sigma_alle#[maske]
+    
+n = n_alle
+f = f_alle
+sigma_f = sigma_alle
 
 (a, b), kovarianz = curve_fit(gerade, n.astype(float), f, sigma=sigma_f, absolute_sigma=True)
 sigma_a, sigma_b = np.sqrt(np.diag(kovarianz))
