@@ -52,7 +52,6 @@ def plot_odr_residuen(x, y, x_err, y_err, output):
 
     #print("chi residuen:", np.sum(d**2))
     #print("chi odr", output.sum_square)
-
     fig, (ax1, ax2) = plt.subplots(2, 1,gridspec_kw={"height_ratios": [3, 1]} )
     x_fit = np.linspace(x.min(), x.max(), 1000)
 
@@ -116,7 +115,6 @@ def fit_lorentz_odr(x, y, xerr, yerr, p0=None):
     delta = output.delta
     eps = output.eps
 
-
     x_korr = x + delta
     y_korr = lorentz(x_korr, *popt)
 
@@ -146,20 +144,14 @@ def fit_lorentz_odr(x, y, xerr, yerr, p0=None):
 
     fig, (ax1, ax2) = plt.subplots(2, 1,figsize=(10, 7),sharex=True,gridspec_kw={"height_ratios": [3, 1]})
 
-    #mesdaten
-    ax1.errorbar(x, y,xerr=xerr,yerr=yerr,fmt="o",markersize=4,capsize=3,label="messdaten"
-    )
-    #lorentz plot
+    ax1.errorbar(x, y,xerr=xerr,yerr=yerr,fmt="o",markersize=4,capsize=3,label="messdaten")
     ax1.plot(x_fit, y_fit, "r-",label=(f"lorentz odr  "f"($chi2/ndof={chi2_red}$)"))
 
     #for xi, yi, xki, yki in zip(x, y, x_korr, y_korr):
         #ax1.plot([xi, xki], [yi, yki],color="green",alpha=0.6,linewidth=1)
-
     ax1.set_ylabel("spannung")
     ax1.legend()
     ax1.grid(alpha=0.3)
-
-    # residuen plott (normiert)
     ax2.plot(x, r_odr,"o",markersize=4,label="normierte residuen")
 
     ax2.axhline(0, color="red", linestyle="--")
