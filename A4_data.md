@@ -32,12 +32,6 @@ cov(v_i,v_3) = v_i*v_3*sigma_r  |  sigma_r = sigma_hersteller / L
 cov(v_1,v_3) = 0.10540
 cov(v_2,v_3) = 0.10541
 
-covarianz matrix:
-<img width="436" height="116" alt="Screenshot 2026-11-20 190341" src="https://github.com/user-attachments/assets/7320d42e-e5bd-422f-81de-d2a8e77d53fe" />
-
-Korelationsmatrix:
-<img width="334" height="108" alt="Screenshot 2026-11-20 190228" src="https://github.com/user-attachments/assets/ad08d4be-4e24-4f86-b728-b7de6248e5f6" />
-
 t_ij = |v_i - v_j|/sqrt(sigma_i^2 + sigma_j^2 - 2cov(i,j))
 t_12 = 0.0611
 t_13 = 0.399
